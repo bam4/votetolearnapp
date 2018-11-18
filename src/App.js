@@ -3,13 +3,26 @@ import logo from './logo.svg';
 import './App.css';
 import AnswerBox from './Components/AnswerBox';
 
+import VoteAnswer from './Components/VoteAnswer';
+
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      answers = [{ '':0 }]
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-        <h1>hey</h1>
-        <AnswerBox></AnswerBox>
+        <div>
+          <AnswerBox></AnswerBox>
+        </div>
+        <div>
+          <VoteAnswer answers={this.state.answers} />
+        </div>
         </header>
       </div>
     );
