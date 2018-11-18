@@ -9,7 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      answersArray : [ {answer:'' , student:'', vote:0} ]
+      answersArray : [ {answer:'' , student:'', vote:0},]
     }
   }
 
