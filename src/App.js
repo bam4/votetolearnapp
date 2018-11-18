@@ -21,7 +21,7 @@ class App extends Component {
           <AnswerBox></AnswerBox>
         </div>
         <div>
-          <VoteAnswer answers={this.state.answersArray} />
+          <VoteAnswer answersArray={this.state.answersArray} />
         </div>
         </header>
       </div>
