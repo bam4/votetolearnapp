@@ -9,7 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      answers : [{ answer:'', vote:0 }]
+      answersArray : [ {answer:'' , student:'', vote:0} ]
     }
   }
 
@@ -21,7 +21,7 @@ class App extends Component {
           <AnswerBox></AnswerBox>
         </div>
         <div>
-          <VoteAnswer answers={this.state.answers} />
+          <VoteAnswer answers={this.state.answersArray} />
         </div>
         </header>
       </div>
