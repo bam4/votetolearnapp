@@ -1,1 +1,1 @@
-// Hello.
+import React, { Component } from 'react';
