@@ -9,8 +9,15 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      answersArray : [ {answer:'' , student:'', vote:0},]
+      answersArray : []
     }
+    this.answerHandler = this.answerHandler.bind(this)
+  }
+
+  answerHandler = (data) => {
+    this.setState( {answersArray: this.state.answersArray.concat(
+      {answer: data, student:'', vote:0}
+    )} )
   }
 
   render() {
@@ -18,7 +25,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
         <div>
-          <AnswerBox></AnswerBox>
+          <AnswerBox answersArray={this.state.answersArray} answerHandler={this.answerHandler}/>
         </div>
         <div>
           <VoteAnswer answersArray={this.state.answersArray} />

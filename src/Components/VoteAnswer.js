@@ -9,7 +9,7 @@ class VoteAnswer extends React.Component {
 
     handleClick(idx) {
         this.props.answersArray[idx].vote += 1;
-        // alert(this.props.answersArray[idx].answer + this.props.answersArray[idx].vote);
+        alert(this.props.answersArray[idx].answer + this.props.answersArray[idx].vote);
     }
 
     addVote = () => {
