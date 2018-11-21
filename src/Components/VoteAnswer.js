@@ -19,7 +19,7 @@ class VoteAnswer extends React.Component {
                 return(
                     <li key={i} onClick={() => this.handleClick(i)}>
                     <button type="button" class="btn btn-primary">
-                        {answer.answer} <span class="badge badge-light">{answer.vote} </span>
+                        {answer.answer} <span className="badge badge-light">{this.props.answersArray[i].vote} </span>
                     </button>
 
                     {/* <button type="submit" className="btn btn-primar">
