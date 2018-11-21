@@ -10,7 +10,7 @@ class VoteAnswer extends React.Component {
     handleClick(idx) {
         this.props.answersArray[idx].vote += 1;
         alert("Thanks for voting!", this.props.answersArray[idx].answer + this.props.answersArray[idx].vote);
-        this.addVote();
+        this.forceUpdate();
     }
 
     addVote = () => {
@@ -18,7 +18,7 @@ class VoteAnswer extends React.Component {
             (i,answer) => {
                 return(
                     <li key={i} onClick={() => this.handleClick(i)}>
-                    <button type="button" class="btn btn-primary">
+                    <button type="button" class="btn btn-primary"> 
                         {answer.answer} <span className="badge badge-light">{this.props.answersArray[i].vote} </span>
                     </button>
 
