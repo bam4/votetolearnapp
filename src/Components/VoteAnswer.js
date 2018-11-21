@@ -15,7 +15,7 @@ class VoteAnswer extends React.Component {
 
     addVote = () => {
         let votes = this.props.answersArray.map(
-            (answer,i) => {
+            (i,answer) => {
                 return(
                     <li key={i} onClick={() => this.handleClick(i)}>
                     <button type="button" class="btn btn-primary">
