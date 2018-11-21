@@ -18,7 +18,7 @@ class AnswerBox extends React.Component {
     submitHandler = (e) => {
         e.preventDefault();
         this.props.answerHandler(this.state.answer);
-        alert(this.state.answer)
+        alert("Your answer has been submitted.", this.state.answer)
         this.setState({ answer: '', student: '' })
     }
 

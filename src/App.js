@@ -24,8 +24,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        <div>
+        <div class="alert alert-info" role="alert">
           <AnswerBox answersArray={this.state.answersArray} answerHandler={this.answerHandler}/>
+        </div>
+        <div>
+          <h1 >Click to vote!</h1>
         </div>
         <div>
           <VoteAnswer answersArray={this.state.answersArray} />

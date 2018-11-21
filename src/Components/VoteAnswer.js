@@ -9,7 +9,8 @@ class VoteAnswer extends React.Component {
 
     handleClick(idx) {
         this.props.answersArray[idx].vote += 1;
-        alert(this.props.answersArray[idx].answer + this.props.answersArray[idx].vote);
+        alert("Thanks for voting!", this.props.answersArray[idx].answer + this.props.answersArray[idx].vote);
+        this.addVote();
     }
 
     addVote = () => {
@@ -17,9 +18,15 @@ class VoteAnswer extends React.Component {
             (answer,i) => {
                 return(
                     <li key={i} onClick={() => this.handleClick(i)}>
-                    <button type="submit" className="btn btn-primar">
-                        <span>{answer.answer}</span>
+                    <button type="button" class="btn btn-primary">
+                        {answer.answer} <span class="badge badge-light">{answer.vote} </span>
                     </button>
+
+                    {/* <button type="submit" className="btn btn-primar">
+
+                        <span >{answer.answer}</span>
+                        <span>{answer.i}</span>
+                    </button> */}
                 </li>
                 )
             })
