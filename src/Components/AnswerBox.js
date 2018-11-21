@@ -4,7 +4,7 @@ class AnswerBox extends React.Component {
     constructor() {
         super();
         this.state = {
-            answer: '', studentID: 0
+            answer: '', student: ''
         }
         this.recordAnswer = this.recordAnswer.bind(this);
         this.submitHandler = this.submitHandler.bind(this);

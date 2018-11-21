@@ -5,33 +5,47 @@ import './App.css';
 import AnswerBox from './Components/AnswerBox';
 import VoteAnswer from './Components/VoteAnswer';
 import PickStudent from './Components/PickStudents';
+import Runtime from './Components/Runtime';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      answersArray: [], chosenStudents: []
-    }
+      student_name: ['Oliver', 'Jake', 'Noah', 'James', 'Jack', 'Connor', 'Liam', 'John', 'Harry', 'Callum',
+          'Mason', 'Robert', 'Jacob', 'Michael', 'Charlie', 'Kyle', 'William', 'Thomas', 'Joe', 'Ethan', 'David',
+          'George', 'Reece', 'Richard'], 
+      chosenStudents: [],
+      answersArray: []
+  }
+    this.handleClick = this.handleClick.bind(this)
     this.answerHandler = this.answerHandler.bind(this)
   }
 
-  chooseStudent = (students) => {
-    this.setState( {chooseStudent: students} )
-    let asw_Arr = []
-    for (let i=0, len = students.length; i<len; i++) {
-        asw_Arr = asw_Arr.concat({ student: students[i], answer: '', vote: 0 })
+  getRandomSubarray = (arr, size) => {
+    var shuffled = arr.slice(0), i = arr.length, temp, index;
+    while (i--) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
     }
-    return asw_Arr
-  }
+    return shuffled.slice(0, size);
+}
 
-  setStudentsArray = () => {
-    let asw_Arr = this.chooseStudent();
+  handleClick = (e) => {
+    e.preventDefault();
+    let studentList  = this.getRandomSubarray(this.state.student_name, 4);
+    console.log(studentList);
+    this.setState( {chosenStudents: studentList} );
+    let asw_Arr = [];
+    for (let i=0, len = studentList.length; i<len; i++) {
+        asw_Arr = asw_Arr.concat({ student: studentList[i], answer: '', vote: 0 })
+    }
     this.setState( {answersArray: asw_Arr} )
-    alert(asw_Arr)
-  }
+}
 
-  answerHandler = (answer, idx) => {
-    this.setState({ answersArray: this.state.answersArray[idx].answer = answer })
+  answerHandler(answer) {
+    this.setState({ answersArray: this.state.answersArray.concat({ student: '', answer: answer, vote: 0 }) })
   }
 
   render() {
@@ -39,13 +53,14 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
         <div class="alert alert-info" role="alert">
+        <PickStudent chooseStudent={this.handleClick}/>
           <AnswerBox answersArray={this.state.answersArray} answerHandler={this.answerHandler}/>
         </div>
         <div>
           <h1 >Click to vote!</h1>
         </div>
         <div>
-          <VoteAnswer answersArray={this.state.answersArray} />
+          {/* <VoteAnswer answersArray={this.state.answersArray} /> */}
         </div>
         </header>
       </div>
