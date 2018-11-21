@@ -4,7 +4,7 @@ class AnswerBox extends React.Component {
     constructor() {
         super();
         this.state = {
-            answer: '', student: ''
+            answer: ''
         }
         this.recordAnswer = this.recordAnswer.bind(this);
         this.submitHandler = this.submitHandler.bind(this);
@@ -12,14 +12,14 @@ class AnswerBox extends React.Component {
 
     recordAnswer = (e) => {
         e.preventDefault();
-        this.setState({ answer: e.target.value})
+        this.setState({ answer: e.target.value});
     }
 
     submitHandler = (e) => {
         e.preventDefault();
         this.props.answerHandler(this.state.answer);
         alert("Your answer has been submitted.", this.state.answer)
-        this.setState({ answer: '', student: '' })
+        this.setState({ answer: ''})
     }
 
     render() {
