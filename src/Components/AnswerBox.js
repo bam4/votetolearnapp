@@ -4,7 +4,7 @@ class AnswerBox extends React.Component {
     constructor() {
         super();
         this.state = {
-            answer: '', student: ''
+            answer: '', studentID: 0
         }
         this.recordAnswer = this.recordAnswer.bind(this);
         this.submitHandler = this.submitHandler.bind(this);
@@ -12,7 +12,7 @@ class AnswerBox extends React.Component {
 
     recordAnswer = (e) => {
         e.preventDefault();
-        this.setState({ answer: e.target.value })
+        this.setState({ answer: e.target.value})
     }
 
     submitHandler = (e) => {
