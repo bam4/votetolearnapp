@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import './App.css';
+import { Button } from 'antd';
+
+import Layout from 'antd/lib/layout';
+import Header from 'antd/lib/layout';
+import Content from 'antd/lib/layout';
 
 import InputQuestion from './Components/InputQuestion';
 import AnswerBox from './Components/AnswerBox';
@@ -144,7 +150,7 @@ class App extends Component {
             <Validate question={this.state.question} answersArray={this.state.answersArray} />
           </div>
           <div>
-          <button type="submit" className="btn btn-primary" onClick={this.reset}>Reset</button>
+          <Button type="primary" onClick={this.reset}>Reset</Button>
           </div>
         </div>
       )
@@ -163,3 +169,4 @@ class App extends Component {
 }
 
 export default App;
+
