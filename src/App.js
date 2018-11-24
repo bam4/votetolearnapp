@@ -94,7 +94,7 @@ class App extends Component {
     } else if (this.state.status === 'vote') {
       return(
       <VoteAnswer answersArray={this.state.answersArray} handleVote={this.setVote} 
-      goToValidate={goToValidate} />
+      goToValidate={this.goToValidate} />
       )
     } else if (this.state.status === 'validate') {
       return(

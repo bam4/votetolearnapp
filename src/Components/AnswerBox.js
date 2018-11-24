@@ -30,7 +30,7 @@ class AnswerBox extends React.Component {
                     <input type="text" value={this.state.answer} onChange={this.recordAnswer} />
                 </div>
                 <div>
-                    <button type="submit" onClick={this.submitHandler}>Submit</button>
+                    <button type="submit" className="btn btn-primary" onClick={this.submitHandler}>Submit</button>
                 </div>
             </div>
         );

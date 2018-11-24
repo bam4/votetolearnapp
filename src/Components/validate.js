@@ -4,7 +4,7 @@ class Validate extends React.Component {
 
     render() {
         return(
-            answersArray.map(
+            this.props.answersArray.map(
                 (instance) => {
                     return <li className="list-group-item d-flex justify-content-between align-items-center" id="writer">
                         <span>{instance.answer}</span> 

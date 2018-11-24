@@ -14,8 +14,7 @@ class VoteAnswer extends React.Component {
     }
 
     addVote = () => {
-        let answersArray = this.props.answersArray
-        const votes = answersArray.map(
+        const votes = this.props.answersArray.map(
             (instance) => {
                 return <li key={instance.studentID} onClick={() => this.handleClick(instance.studentID)}>
                     <button type="button" className="btn btn-primary">
@@ -26,19 +25,26 @@ class VoteAnswer extends React.Component {
         return votes;
     }
 
-    changeStatus = () => {
+    changeStatus = (e) => {
+        e.preventDefault();
         this.props.goToValidate();
     }
 
     render() {
         return (
-            <ul className="list-group">
-                {this.addVote()}
-            </ul>
-            <button type="button" className="btn btn-primary" onClick={this.changeStatus}>Validate</button>
-        )
+            <div>
+                <div>
+                    <ul className="list-group">
+                        <this.addVote />
+                    </ul>
+                </div>
+                <br />
+                <div>
+                    <button type="submit" className="btn btn-primary" onClick={this.changeStatus}>Validate</button>
+                </div>
+            </div>
+        );
     };
-
 }
 
 export default VoteAnswer;
