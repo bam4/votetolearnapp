@@ -5,40 +5,37 @@ class VoteAnswer extends React.Component {
         super();
         this.addVote = this.addVote.bind(this);
         this.handleClick = this.handleClick.bind(this);
+        this.changeStatus = this.changeStatus.bind(this);
     }
 
-    handleClick(idx) {
-        this.props.answersArray[idx].vote += 1;
-        alert("Thanks for voting!", this.props.answersArray[idx].answer + this.props.answersArray[idx].vote);
-        this.forceUpdate();
+    handleClick(studentID) {
+        this.props.handleVote(studentID);
+        alert("Thanks for voting!");
     }
 
     addVote = () => {
-        let votes = this.props.answersArray.map(
-            (i,answer) => {
-                return(
-                    <li key={i} onClick={() => this.handleClick(i)}>
-                    <button type="button" class="btn btn-primary"> 
-                        {answer.answer} <span className="badge badge-light">{this.props.answersArray[i].vote} </span>
+        let answersArray = this.props.answersArray
+        const votes = answersArray.map(
+            (instance) => {
+                return <li key={instance.studentID} onClick={() => this.handleClick(instance.studentID)}>
+                    <button type="button" className="btn btn-primary">
+                        {instance.answer}
                     </button>
-
-                    {/* <button type="submit" className="btn btn-primar">
-
-                        <span >{answer.answer}</span>
-                        <span>{answer.i}</span>
-                    </button> */}
                 </li>
-                )
             })
-            return votes;
-        }
+        return votes;
+    }
 
+    changeStatus = () => {
+        this.props.goToValidate();
+    }
 
     render() {
         return (
             <ul className="list-group">
                 {this.addVote()}
             </ul>
+            <button type="button" className="btn btn-primary" onClick={this.changeStatus}>Validate</button>
         )
     };
 
