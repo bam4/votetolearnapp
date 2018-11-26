@@ -24,6 +24,11 @@
   color: #61dafb;
 }
 
+h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f5a97e;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
