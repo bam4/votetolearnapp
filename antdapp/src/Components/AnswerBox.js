@@ -30,7 +30,7 @@ class AnswerBox extends React.Component {
             <div>
                 <div>
                 <Avatar size={64} icon="user"/>
-                <h1>Hello {this.props.student}</h1>
+                <h2>Hello {this.props.student}! Input your answer:</h2>
                 </div>
                 <div>
                     <TextArea rows={4} type="text" value={this.state.answer} onChange={this.recordAnswer} />
