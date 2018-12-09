@@ -202,8 +202,11 @@ class App extends Component {
           <header>
             <nav>
               <ul>
-                <li><Link to="/InputQuestion">Input Question</Link></li>
-                <li><Link to="/PickStudents">Pick Students</Link></li>
+                <li><Link to="/">Input Question</Link></li>
+                <li><Link to="/">Pick Students</Link></li>
+                <li><Link to="/">Enter Your Answer</Link></li>
+                <li><Link to="/">Vote on an Answer</Link></li>
+                <li><Link to="/">Validate Answers</Link></li>
                 {/* <li><Link to="/Vote">Vote</Link></li>
                 <li><Link to="/Validate">Validate</Link></li> */}
                 {/* From a sample I was using: */}
