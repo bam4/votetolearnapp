@@ -202,11 +202,11 @@ class App extends Component {
           <header>
             <nav>
               <ul>
-                <li><Link to="/">Input Question</Link></li>
-                <li><Link to="/">Pick Students</Link></li>
-                <li><Link to="/">Enter Your Answer</Link></li>
-                <li><Link to="/">Vote on an Answer</Link></li>
-                <li><Link to="/">Validate Answers</Link></li>
+                <li><Link to="/InputQuestion">Input Question</Link></li>
+                <li><Link to="/PickStudent">Pick Students</Link></li>
+                <li><Link to="/EnterAnswer">Enter Your Answer</Link></li>
+                <li><Link to="/Vote">Vote on an Answer</Link></li>
+                <li><Link to="/Validate">Validate Answers</Link></li>
                 {/* <li><Link to="/Vote">Vote</Link></li>
                 <li><Link to="/Validate">Validate</Link></li> */}
                 {/* From a sample I was using: */}
@@ -228,9 +228,9 @@ class App extends Component {
               <this.handlePage />
 
               {/* <Route path="/InputQuestion" exact component={InputQuestion}  /> */}
-              <Route path="/PickStudents" exact component={PickStudents} />
-              <Route path="/Vote" exact component={VoteAnswer} />
-              <Route path="/Validate" exact component={Validate} />
+              <Route path="/Dummy" exact component={PickStudents} />
+              <Route path="/Dummy" exact component={VoteAnswer} />
+              <Route path="/Dummy" exact component={Validate} />
               {/* <Route
                 path= "/InputQuestion"
                 render={(props) =><Component {...props} addQuestion={this.addQuestion} />}
