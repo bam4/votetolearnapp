@@ -1,0 +1,32 @@
+.Links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.Links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+
+}
+
+.Links li {
+    display: inline-block;
+    margin: 20px;
+}
+
+.Links a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.Links a:hover,
+.Links a:active{
+    color: orange
+}

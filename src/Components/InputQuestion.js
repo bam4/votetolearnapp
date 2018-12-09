@@ -22,13 +22,15 @@ class InputQuestion extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Input the Question</h1>
+            <div className="alert alert-info" role="alert">
                 <div>
-                    <input type="text" value={this.state.question} onChange={this.recordQuestion} />
-                </div>
-                <div>
-                    <button type="submit" className="btn btn-primary" onClick={this.submitHandler}>Submit</button>
+                    <h1>Input the Question</h1>
+                    <div>
+                        <input type="text" value={this.state.question} onChange={this.recordQuestion} />
+                    </div>
+                    <div>
+                        <button type="submit" className="btn btn-primary" onClick={this.submitHandler}>Submit</button>
+                    </div>
                 </div>
             </div>
         );
