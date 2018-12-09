@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './InputQuestion.css';
+
 class InputQuestion extends React.Component {
     constructor() {
         super();
@@ -22,14 +24,14 @@ class InputQuestion extends React.Component {
 
     render() {
         return (
-            <div className="alert alert-info" role="alert">
+            <div className="alert alert-info" role="alert" class="CoolText">
                 <div>
-                    <h1>Input the Question</h1>
+                    <h1 >Professor, please input the question that you would like the class to answer.</h1>
                     <div>
                         <input type="text" value={this.state.question} onChange={this.recordQuestion} />
                     </div>
                     <div>
-                        <button type="submit" className="btn btn-primary" onClick={this.submitHandler}>Submit</button>
+                        <button type="submit" className="btn btn-primary"  onClick={this.submitHandler}>Submit</button>
                     </div>
                 </div>
             </div>

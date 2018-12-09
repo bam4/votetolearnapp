@@ -25,12 +25,12 @@ class AnswerBox extends React.Component {
     render() {
         return (
             <div>
-                <h1>Hello {this.props.student}</h1>
+                <p><i> {this.props.student}, what is your answer to this question?</i></p>
                 <div>
                     <input type="text" value={this.state.answer} onChange={this.recordAnswer} />
                 </div>
                 <div>
-                    <button type="submit" className="btn btn-primary" onClick={this.submitHandler}>Submit</button>
+                    <button type="submit" className="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Your answer will be seen by the rest of the class." onClick={this.submitHandler}>Submit</button>
                 </div>
             </div>
         );

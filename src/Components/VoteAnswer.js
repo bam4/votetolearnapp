@@ -34,6 +34,7 @@ class VoteAnswer extends React.Component {
         return (
             <div>
                 <div>
+                    <h1>Please choose the item you would like to vote on.</h1>
                     <ul className="list-group">
                         <this.addVote />
                     </ul>

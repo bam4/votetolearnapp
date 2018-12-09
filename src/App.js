@@ -10,6 +10,8 @@ import './Links.css';
 import { Route, Link } from 'react-router-dom';
 import PickStudents from './Components/PickStudents';
 
+import './App.css';
+
 
 // All of our functionality is currently in the App class.
 class App extends Component {
@@ -131,9 +133,18 @@ class App extends Component {
   handlePage = () => {
     if (this.state.status === 'question') {
       return (
-        <div className="alert alert-info" role="alert">
-          <InputQuestion addQuestion={this.addQuestion} />
+        
+        <div>
+          <div className="alert alert-info" role="alert" class="InputQuestion">
+            <InputQuestion addQuestion={this.addQuestion} />
+          </div>
+          {/* <div className="progress">
+            <div className="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+            </div>
+          </div> */}
         </div>
+
+
       )
     } else if (this.state.status === 'pick') {
       return (
@@ -145,7 +156,7 @@ class App extends Component {
       return (
         <div>
           <div>
-            <h3>Question: {this.state.question}</h3>
+            <h1>Question: {this.state.question}</h1>
           </div>
           <div className="alert alert-info" role="alert">
             <AnswerBox question={this.state.question}
@@ -159,7 +170,7 @@ class App extends Component {
       return (
         <div>
           <div>
-            <h3>Question: {this.state.question}</h3>
+            <h1>Question: {this.state.question}</h1>
           </div>
           <div className="alert alert-info" role="alert">
             <VoteAnswer question={this.state.question} answersArray={this.state.answersArray} handleVote={this.setVote}
@@ -212,6 +223,7 @@ class App extends Component {
           <div className="App">
             <header className="App-header">
               <this.handlePage />
+
               {/* <Route path="/InputQuestion" exact component={InputQuestion}  /> */}
               <Route path="/PickStudents" exact component={PickStudents} />
               <Route path="/Vote" exact component={VoteAnswer} />
