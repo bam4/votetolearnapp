@@ -36,7 +36,7 @@ class AnswerBox extends React.Component {
                     <TextArea rows={4} type="text" value={this.state.answer} onChange={this.recordAnswer} />
                 </div>
                 <div>
-                    <Button type="primary" onClick={this.submitHandler}>Submit</Button>
+                    <Button type="primary" data-toggle="tooltip" data-placement="top" title="Your answer will be seen by the rest of the class." onClick={this.submitHandler}>Submit</Button>
                 </div>
             </div>
         );

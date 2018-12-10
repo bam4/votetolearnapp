@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { Input, Button} from 'antd';
 
-import './InputQuestion.css';
+const { TextArea } = Input;
 
 class InputQuestion extends React.Component {
     constructor() {
@@ -14,7 +15,7 @@ class InputQuestion extends React.Component {
 
     recordQuestion = (e) => {
         e.preventDefault();
-        this.setState({ question: e.target.value});
+        this.setState({ question: e.target.value });
     }
 
     submitHandler = (e) => {
@@ -26,12 +27,12 @@ class InputQuestion extends React.Component {
         return (
             <div className="alert alert-info" role="alert" class="CoolText">
                 <div>
-                    <h1 >Professor, please input the question that you would like the class to answer.</h1>
+                    <h1>Professor, please input the question that you would like the class to answer.</h1>
                     <div>
-                        <input type="text" value={this.state.question} onChange={this.recordQuestion} />
+                        <TextArea rows={4} value={this.state.question} onChange={this.recordQuestion} />
                     </div>
                     <div>
-                        <button type="submit" className="btn btn-primary"  onClick={this.submitHandler}>Submit</button>
+                        <Button type="primary" onClick={this.submitHandler}>Submit</Button>
                     </div>
                 </div>
             </div>

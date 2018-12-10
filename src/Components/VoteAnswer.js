@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'antd';
 
 class VoteAnswer extends React.Component {
     constructor() {
@@ -17,9 +18,9 @@ class VoteAnswer extends React.Component {
         const votes = this.props.answersArray.map(
             (instance) => {
                 return <li key={instance.studentID} onClick={() => this.handleClick(instance.studentID)}>
-                    <button type="button" className="btn btn-primary">
+                    <Button block type="button" className="btn btn-primary">
                         {instance.answer}
-                    </button>
+                    </Button>
                 </li>
             })
         return votes;
@@ -41,7 +42,7 @@ class VoteAnswer extends React.Component {
                 </div>
                 <br />
                 <div>
-                    <button type="submit" className="btn btn-primary" onClick={this.changeStatus}>Validate</button>
+                    <Button type="primary" onClick={this.changeStatus}>Validate</Button>
                 </div>
             </div>
         );

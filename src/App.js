@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './App.css';
+import { Button } from 'antd';
 import {BrowserRouter} from 'react-router-dom';
 
 import InputQuestion from './Components/InputQuestion';
@@ -130,11 +132,16 @@ class App extends Component {
     status: 'question'})
   }
 
+  changeBackground(color) {
+    document.body.style.background = color;
+ }
+ 
+
   handlePage = () => {
     if (this.state.status === 'question') {
+      this.changeBackground('#f5a97e')
       return (
-        
-        <div>
+       <div>
           <div className="alert alert-info" role="alert" class="InputQuestion">
             <InputQuestion addQuestion={this.addQuestion} />
           </div>
@@ -143,16 +150,16 @@ class App extends Component {
             </div>
           </div> */}
         </div>
-
-
       )
     } else if (this.state.status === 'pick') {
+      this.changeBackground('#f5a97e')
       return (
         <div className="alert alert-info" role="alert">
-          <PickStudent chooseStudent={this.handleClick} />
+          <PickStudent chooseStudent={this.handleClick} className="PickStudent"/>
         </div>
       )
     } else if (this.state.status === 'answer') {
+      this.changeBackground('cornflowerblue')
       return (
         <div>
           <div>
@@ -167,6 +174,7 @@ class App extends Component {
         </div>
       )
     } else if (this.state.status === 'vote') {
+      this.changeBackground('cornflowerblue')
       return (
         <div>
           <div>
@@ -179,6 +187,7 @@ class App extends Component {
         </div>
       )
     } else if (this.state.status === 'validate') {
+      this.changeBackground('#f5a97e')
       return (
         <div>
           <div>
@@ -188,7 +197,7 @@ class App extends Component {
             <Validate question={this.state.question} answersArray={this.state.answersArray} />
           </div>
           <div>
-          <button type="submit" className="btn btn-primary" onClick={this.reset}>Reset</button>
+          <Button type="primary" onClick={this.reset}>Reset</Button>
           </div>
         </div>
       )

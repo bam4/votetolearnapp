@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Avatar, Input, Button } from 'antd';
+
+const { TextArea } = Input;
 
 class AnswerBox extends React.Component {
     constructor() {
@@ -12,25 +15,28 @@ class AnswerBox extends React.Component {
 
     recordAnswer = (e) => {
         e.preventDefault();
-        this.setState({ answer: e.target.value});
+        this.setState({ answer: e.target.value });
     }
 
     submitHandler = (e) => {
         e.preventDefault();
         this.props.addAnswer(this.state.answer);
         alert("Your answer has been submitted.")
-        this.setState({ answer: ''})
+        this.setState({ answer: '' })
     }
 
     render() {
         return (
             <div>
-                <p><i> {this.props.student}, what is your answer to this question?</i></p>
                 <div>
-                    <input type="text" value={this.state.answer} onChange={this.recordAnswer} />
+                    <Avatar size={64} icon="user" />
+                    <p><i> {this.props.student}, what is your answer to this question?</i></p>
                 </div>
                 <div>
-                    <button type="submit" className="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Your answer will be seen by the rest of the class." onClick={this.submitHandler}>Submit</button>
+                    <TextArea rows={4} type="text" value={this.state.answer} onChange={this.recordAnswer} />
+                </div>
+                <div>
+                    <Button type="primary" data-toggle="tooltip" data-placement="top" title="Your answer will be seen by the rest of the class." onClick={this.submitHandler}>Submit</Button>
                 </div>
             </div>
         );
