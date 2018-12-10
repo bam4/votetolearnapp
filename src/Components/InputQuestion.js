@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Input, Button} from 'antd';
+import { Input, Button } from 'antd';
 
 const { TextArea } = Input;
 
@@ -21,6 +21,7 @@ class InputQuestion extends React.Component {
     submitHandler = (e) => {
         e.preventDefault();
         this.props.addQuestion(this.state.question);
+        this.props.chooseStudent();
     }
 
     render() {
@@ -32,7 +33,8 @@ class InputQuestion extends React.Component {
                         <TextArea rows={4} value={this.state.question} onChange={this.recordQuestion} />
                     </div>
                     <div>
-                        <Button type="primary" onClick={this.submitHandler}>Submit</Button>
+                        <Button type="primary" onClick={this.submitHandler}>
+                            Submit and select four random students for me.</Button>
                     </div>
                 </div>
             </div>

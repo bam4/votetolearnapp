@@ -45,7 +45,7 @@ class App extends Component {
 
   // Updates the current question and move the status to the next section:
   addQuestion = (question) => {
-    this.setState({ question: question, status: 'pick' })
+    this.setState({ question: question})
   }
 
   // Get a random, small group of students from all the students. 
@@ -62,7 +62,6 @@ class App extends Component {
 
   // What to do with clicks --> Don't understand this entirely.
   handleClick = (e) => {
-    e.preventDefault();
     // Get for students.
     let studentList = this.getRandomSubarray(this.state.student_name, 4);
     // Mark these students as our selected students:
@@ -143,7 +142,7 @@ class App extends Component {
       return (
        <div>
           <div className="alert alert-info" role="alert" class="InputQuestion">
-            <InputQuestion addQuestion={this.addQuestion} />
+            <InputQuestion addQuestion={this.addQuestion} chooseStudent={this.handleClick}/>
           </div>
           {/* <div className="progress">
             <div className="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
@@ -155,7 +154,7 @@ class App extends Component {
       this.changeBackground('#f5a97e')
       return (
         <div className="alert alert-info" role="alert">
-          <PickStudent chooseStudent={this.handleClick} className="PickStudent"/>
+          <PickStudent chooseStudent={this.handleClick}/>
         </div>
       )
     } else if (this.state.status === 'answer') {
