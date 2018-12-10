@@ -18,7 +18,7 @@ class VoteAnswer extends React.Component {
         const votes = this.props.answersArray.map(
             (instance) => {
                 return <li key={instance.studentID} onClick={() => this.handleClick(instance.studentID)}>
-                    <Button block type="button" className="btn btn-primary">
+                    <Button block type="button" class="list-group-item list-group-item-action">
                         {instance.answer}
                     </Button>
                 </li>
@@ -36,7 +36,7 @@ class VoteAnswer extends React.Component {
             <div>
                 <div>
                     <h1>Please choose the item you would like to vote on.</h1>
-                    <ul className="list-group">
+                    <ul>
                         <this.addVote />
                     </ul>
                 </div>
