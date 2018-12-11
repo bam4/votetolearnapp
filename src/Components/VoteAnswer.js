@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
+import './voteAnswer.css'; 
 
 class VoteAnswer extends React.Component {
     constructor() {
@@ -35,7 +36,7 @@ class VoteAnswer extends React.Component {
         return (
             <div>
                 <div>
-                    <h1>Please choose the item you would like to vote on.</h1>
+                    <h3 className = "blackText">Please choose the item you would like to vote on:</h3>
                     <ul>
                         <this.addVote />
                     </ul>
