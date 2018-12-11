@@ -27,7 +27,7 @@ class AnswerBox extends React.Component {
 
     render() {
         return (
-            <div className="answer">
+            <div>
                 <div>
                     <Avatar size={64} icon="user" />
                     <p><i> {this.props.student}, what is your answer to this question?</i></p>

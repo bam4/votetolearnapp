@@ -141,7 +141,7 @@ class App extends Component {
       this.changeBackground('#f5a97e')
       return (
        <div>
-          <div className="alert alert-info" role="alert" class="InputQuestion">
+          <div className="CoolText">
             <InputQuestion addQuestion={this.addQuestion} chooseStudent={this.handleClick}/>
           </div>
           {/* <div className="progress">
@@ -160,9 +160,9 @@ class App extends Component {
     } else if (this.state.status === 'answer') {
       this.changeBackground('cornflowerblue')
       return (
-        <div>
+        <div className="answer">
           <div>
-            <h3>Question: {this.state.question}</h3>
+            <h3 id='q'>Question: {this.state.question}</h3>
           </div>
           <div className="alert alert-info" role="alert">
             <AnswerBox question={this.state.question}
@@ -177,7 +177,7 @@ class App extends Component {
       return (
         <div>
           <div>
-            <h3>Question: {this.state.question}</h3>
+            <h3 id='q'>Question: {this.state.question}</h3>
           </div>
           <div className="alert alert-info" role="alert">
             <VoteAnswer question={this.state.question} answersArray={this.state.answersArray} handleVote={this.setVote}
@@ -190,7 +190,7 @@ class App extends Component {
       return (
         <div className="validate">
           <div>
-            <h3>Question: {this.state.question}</h3>
+            <h3 id='q'>Question: {this.state.question}</h3>
           </div>
           <div className="alert alert-info" role="alert">
             <Validate question={this.state.question} answersArray={this.state.answersArray} />

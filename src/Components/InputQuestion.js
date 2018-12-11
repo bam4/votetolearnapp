@@ -26,7 +26,7 @@ class InputQuestion extends React.Component {
 
     render() {
         return (
-            <div className="CoolText">
+            <div>
                 <div>
                     <h1>Professor, please input the question that you would like the class to answer.</h1>
                     <div>

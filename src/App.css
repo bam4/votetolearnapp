@@ -29,21 +29,27 @@
   flex-direction: column;
 }
 
-h3 {
+#q {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: floralwhite;
-  font-weight: bold
+  font-weight: bold;
+  width: 60rem;
+  text-align: center;
+  margin: auto, auto, auto;
 }
 
 h1 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: floralwhite;
-  font-weight: bold
+  font-weight: bold;
+  width: 60rem;
+  text-align: center;
 }
 
 .CoolText {
   margin: auto auto 3rem;
   width: 60rem;
+  text-align: center;
 }
 
 .select {
@@ -54,28 +60,44 @@ h1 {
 
 .answer {
   width: 60rem;
+  overflow:scroll;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
 }
 
 .answerbox {
   margin: auto auto 2rem;
+  overflow:scroll;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
 }
 
 .blackText {
   color: black;
+  text-align: center;
 }
 
 .vote {
   margin: auto, auto, 2rem;
   width: 60rem;
+  overflow:scroll;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
 }
 
 .validate {
   margin: auto, auto, 2rem;
   width: 50rem;
+  overflow:scroll;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
 }
 
 .list-group-item {
   margin: 0.5rem;
+  overflow:scroll;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
