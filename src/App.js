@@ -179,7 +179,7 @@ class App extends Component {
           <div>
             <h3 id='q'>Question: {this.state.question}</h3>
           </div>
-          <div className="alert alert-info" role="alert">
+          <div className="vote">
             <VoteAnswer question={this.state.question} answersArray={this.state.answersArray} handleVote={this.setVote}
               goToValidate={this.goToValidate} />
           </div>
