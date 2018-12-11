@@ -27,16 +27,16 @@ class AnswerBox extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="answer">
                 <div>
                     <Avatar size={64} icon="user" />
                     <p><i> {this.props.student}, what is your answer to this question?</i></p>
                 </div>
                 <div>
-                    <TextArea rows={4} type="text" value={this.state.answer} onChange={this.recordAnswer} />
+                    <TextArea rows={5} type="text" value={this.state.answer} onChange={this.recordAnswer} className="answerbox"/>
                 </div>
                 <div>
-                    <Button type="primary" data-toggle="tooltip" data-placement="top" title="Your answer will be seen by the rest of the class." onClick={this.submitHandler}>Submit</Button>
+                    <Button type="primary" data-toggle="tooltip" data-placement="top" className="select" title="Your answer will be seen by the rest of the class." onClick={this.submitHandler}>Submit</Button>
                 </div>
             </div>
         );

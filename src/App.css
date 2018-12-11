@@ -31,13 +31,51 @@
 
 h3 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #f5a97e;
+  color: floralwhite;
+  font-weight: bold
 }
 
 h1 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: floralwhite;
   font-weight: bold
+}
+
+.CoolText {
+  margin: auto auto 3rem;
+  width: 60rem;
+}
+
+.select {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.answer {
+  width: 60rem;
+}
+
+.answerbox {
+  margin: auto auto 2rem;
+}
+
+.blackText {
+  color: black;
+}
+
+.vote {
+  margin: auto, auto, 2rem;
+  width: 60rem;
+}
+
+.validate {
+  margin: auto, auto, 2rem;
+  width: 50rem;
+}
+
+.list-group-item {
+  margin: 0.5rem;
 }
 
 @keyframes App-logo-spin {

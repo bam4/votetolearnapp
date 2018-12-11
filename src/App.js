@@ -162,7 +162,7 @@ class App extends Component {
       return (
         <div>
           <div>
-            <h1>Question: {this.state.question}</h1>
+            <h3>Question: {this.state.question}</h3>
           </div>
           <div className="alert alert-info" role="alert">
             <AnswerBox question={this.state.question}
@@ -177,7 +177,7 @@ class App extends Component {
       return (
         <div>
           <div>
-            <h1>Question: {this.state.question}</h1>
+            <h3>Question: {this.state.question}</h3>
           </div>
           <div className="alert alert-info" role="alert">
             <VoteAnswer question={this.state.question} answersArray={this.state.answersArray} handleVote={this.setVote}
@@ -188,7 +188,7 @@ class App extends Component {
     } else if (this.state.status === 'validate') {
       this.changeBackground('#f5a97e')
       return (
-        <div>
+        <div className="validate">
           <div>
             <h3>Question: {this.state.question}</h3>
           </div>
@@ -196,7 +196,7 @@ class App extends Component {
             <Validate question={this.state.question} answersArray={this.state.answersArray} />
           </div>
           <div>
-          <Button type="primary" onClick={this.reset}>Reset</Button>
+          <Button type="primary" onClick={this.reset} className="select">Reset</Button>
           </div>
         </div>
       )

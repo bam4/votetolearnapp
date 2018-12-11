@@ -26,14 +26,14 @@ class InputQuestion extends React.Component {
 
     render() {
         return (
-            <div className="alert alert-info" role="alert" class="CoolText">
+            <div className="CoolText">
                 <div>
                     <h1>Professor, please input the question that you would like the class to answer.</h1>
                     <div>
-                        <TextArea rows={4} value={this.state.question} onChange={this.recordQuestion} />
+                        <TextArea rows={5} value={this.state.question} onChange={this.recordQuestion} />
                     </div>
                     <div>
-                        <Button type="primary" onClick={this.submitHandler}>
+                        <Button type="primary" onClick={this.submitHandler} className="select">
                             Submit and select four random students for me.</Button>
                     </div>
                 </div>
