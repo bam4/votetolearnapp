@@ -8,7 +8,7 @@ class Validate extends React.Component {
                     (instance) => {
                         return <li className="list-group-item d-flex justify-content-between align-items-center" id="writer">
                             <span>{instance.answer}</span>
-                            <span>{instance.vote}</span>
+                            <span>{instance.vote} Votes</span>
                         </li>
                     })
         )
