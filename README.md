@@ -4,6 +4,37 @@
 ## Bringing Life Back to Humanities Lectures
 
 
+###The Problem:
+Students and professors want more participation in humanities lectures.
+
+### Our Solution:
+Whenever a professor asks an open-ended question in class, our app enables students to either contribute an answer or vote on an answer.
+
+
+__Students Can__
+
+1. 
+
+
+
+
+
+
+# Contact
+
+For information on this project, Email brettmoody@Me.com.
+
+
+
+
+
+
+
+
+
+
+
+# React Documentation
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
