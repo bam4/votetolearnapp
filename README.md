@@ -25,7 +25,8 @@ __Professors Can__
 
 
 
-### [Our Slide Deck] (https://drive.google.com/file/d/1VFwsmbjl-21zi_p1u8sUTbhtTHKiUKEe/view?usp=sharing)
+__[Our Slide Deck](https://drive.google.com/file/d/1VFwsmbjl-21zi_p1u8sUTbhtTHKiUKEe/view?usp=sharing)__
+
 
 ###  Contact
 
