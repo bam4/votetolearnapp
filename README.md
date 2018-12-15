@@ -3,10 +3,10 @@
 
 ## Bringing Life Back to Humanities Lectures
 
-## The Problem:
+# The Problem:
 Students and professors want more participation in humanities lectures.
 
-## Our Solution:
+# Our Solution:
 Whenever a professor asks an open-ended question in class, our app enables students to either contribute an answer or vote on an answer.
 
 __[Try the App](https://fierce-citadel-44960.herokuapp.com/)__
@@ -25,7 +25,7 @@ __[Our Slide Deck](https://drive.google.com/file/d/1VFwsmbjl-21zi_p1u8sUTbhtTHKi
 1. Submit questions to the class.
 2. See how well the class is understanding the material at a glance.
 
-[Professor Functionality] (https://media.giphy.com/media/9xv3EaoiiANoxjtCeu/giphy.gif)
+[Professor Functionality](https://media.giphy.com/media/9xv3EaoiiANoxjtCeu/giphy.gif)
 
 ###  Contact
 
