@@ -88,14 +88,14 @@ h1 {
 
 .list-group-item {
   margin: 0.5rem;
-  overflow:scroll;
-  -webkit-overflow-scrolling: touch;
+  /* overflow:scroll;
+  -webkit-overflow-scrolling: touch; */
   text-align: center;
 }
 
 #listt {
-  overflow:scroll;
-  -webkit-overflow-scrolling: touch;
+  /* overflow:scroll;
+  -webkit-overflow-scrolling: touch; */
   text-align: center;
 }
 

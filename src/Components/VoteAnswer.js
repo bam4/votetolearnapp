@@ -19,7 +19,7 @@ class VoteAnswer extends React.Component {
             (instance) => {
                 return <li key={instance.studentID} onClick={() => this.handleClick(instance.studentID)}>
                     <Button block type="button" class="list-group-item list-group-item-action" id="listt">
-                        {instance.answer}
+                        {instance.answer + '\n'}
                     </Button>
                 </li>
             })
