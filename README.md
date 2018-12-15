@@ -1,7 +1,5 @@
 
-# JoinIn
-
-## Bringing Life Back to Humanities Lectures
+# JoinIn: Bringing Life Back to Humanities Lectures
 
 ### The Problem:
 Students and professors want more participation in humanities lectures.
