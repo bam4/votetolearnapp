@@ -19,11 +19,13 @@ __[Our Slide Deck](https://drive.google.com/file/d/1VFwsmbjl-21zi_p1u8sUTbhtTHKi
 1. Submit answers to open-ended questions that the professor asks.
 2. Vote on questions submitted by other students.
 
-[Alt Text](https://gph.is/2Ce5wtj)
+[Alt Text](https://media.giphy.com/media/hTAUNCiS4q3IClMbRV/giphy.gif)
 
 ###__Professors Can:__
 1. Submit questions to the class.
 2. See how well the class is understanding the material at a glance.
+
+[Professor Functionality] (https://media.giphy.com/media/9xv3EaoiiANoxjtCeu/giphy.gif)
 
 ###  Contact
 
